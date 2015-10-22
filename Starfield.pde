@@ -6,7 +6,7 @@ void setup()
 	background(0);
 	for(int i = 0;i<pixelsNum;i++)
 	{
-		if(Math.random()*500<499)
+		if(Math.random()<0.99)
 		{
 		pixels[i] = new NormalParticle();
 		}
