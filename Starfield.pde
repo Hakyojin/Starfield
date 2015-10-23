@@ -1,5 +1,5 @@
 int pixelsNum = 1000;
-Particle[] pixels = new Particle[pixelsNum];
+Particle[] partList = new Particle[pixelsNum];
 void setup()
 {
 	size(400,400);
@@ -8,14 +8,14 @@ void setup()
 	{
 		if(Math.random()<0.99)
 		{
-		pixels[i] = new NormalParticle();
+		partList[i] = new NormalParticle();
 		}
 		else
 		{
-		pixels[i] = new JumboParticle();
+		partList[i] = new JumboParticle();
 		}
 	}
-	pixels[pixelsNum-1] = new OddballParticle();
+	partList[pixelsNum-1] = new OddballParticle();
 }
 void draw()
 {
@@ -24,8 +24,8 @@ void draw()
 	rect(160,160,100,100);
 	for(int i=0;i<pixelsNum;i++)
 	{
-		pixels[i].show();
-		pixels[i].move();
+		partList[i].show();
+		partList[i].move();
 	}
 }
 class NormalParticle implements Particle
